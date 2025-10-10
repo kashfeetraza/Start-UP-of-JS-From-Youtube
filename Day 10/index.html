@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+        const fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+        console.log("Original array:", fruits);
+
+        // Add element
+        fruits.push("Pineapple");
+        console.log("After push:", fruits);
+
+        // Remove last element
+        fruits.pop();
+        console.log("After pop:", fruits);
+
+        // Remove first element
+        fruits.shift();
+        console.log("After shift:", fruits);
+
+        // Add at beginning
+        fruits.unshift("Strawberry");
+        console.log("After unshift:", fruits);
+
+        // Filter example
+        const longFruits = fruits.filter(fruit => fruit.length > 5);
+        console.log("Fruits with name length > 5:", longFruits);
+    </script>
+</body>
+</html>
