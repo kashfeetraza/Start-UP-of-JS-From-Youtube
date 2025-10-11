@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Text Example</title>
+  <style>
+    .text {
+      font-size: 20px;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="text" id="heading">Hello, welcome to my website!</h2>
+  <button onclick="changeText()">Click Me</button>
+
+  <script>
+    function changeText() {
+      let heading = document.getElementById("heading");
+      heading.innerText = "Text changed successfully!";
+      heading.style.color = "green";
+      heading.style.fontSize = "30px";
+    }
+  </script>
+</body>
+</html>
