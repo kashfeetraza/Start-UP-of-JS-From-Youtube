@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - techbrewplus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px 60px;
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            color: #999;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            margin-bottom: 80px;
+        }
+
+        .about-section h2 {
+            font-size: 32px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            color: #cccccc;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .mission-box, .vision-box {
+            background-color: #1a1a1a;
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        .mission-box h3, .vision-box h3 {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .mission-box p, .vision-box p {
+            font-size: 16px;
+            color: #cccccc;
+            line-height: 1.8;
+        }
+
+        .values-section {
+            padding: 60px 20px;
+            background-color: #0f0f0f;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .value-item h4 {
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .value-item p {
+            font-size: 16px;
+            color: #999;
+            line-height: 1.6;
+        }
+
+        .team-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 32px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            background-color: #1a1a1a;
+            padding: 40px 30px;
+            border-radius: 4px;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member-photo {
+            width: 150px;
+            height: 150px;
+            background-color: #333;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+
+        .team-member h4 {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stats-section {
+            padding: 80px 20px;
+            background-color: #0f0f0f;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #333;
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 968px) {
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-section h1 {
+                font-size: 32px;
+                letter-spacing: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">techbrewplus</div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <h1>ABOUT US</h1>
+        <p>We are passionate about crafting exceptional digital experiences and brewing innovative solutions that empower businesses to thrive in the modern world.</p>
+    </section>
+
+    <section class="about-content">
+        <div class="about-section">
+            <h2>Our Story</h2>
+            <p>Founded with a vision to blend technology and creativity, techbrewplus has been at the forefront of digital innovation. Our journey began with a simple belief: that great technology should be accessible, intuitive, and transformative.</p>
+            <p>Over the years, we've grown from a small team of passionate developers into a full-service digital agency, serving clients across industries and helping them navigate the ever-evolving digital landscape.</p>
+        </div>
+
+        <div class="mission-vision">
+            <div class="mission-box">
+                <h3>Our Mission</h3>
+                <p>To deliver cutting-edge digital solutions that drive business growth and create meaningful connections between brands and their audiences.</p>
+            </div>
+
+            <div class="vision-box">
+                <h3>Our Vision</h3>
+                <p>To be the leading digital partner for businesses seeking innovation, excellence, and sustainable growth in the digital age.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 32px; font-weight: 300; letter-spacing: 2px; text-transform: uppercase;">Our Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <h4>Innovation</h4>
+                    <p>We constantly push boundaries and explore new technologies to deliver cutting-edge solutions.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Quality</h4>
+                    <p>Excellence is not an option, it's our standard. We deliver nothing but the best.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Integrity</h4>
+                    <p>We build trust through transparency, honesty, and ethical business practices.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Collaboration</h4>
+                    <p>We believe in the power of teamwork and partnership to achieve extraordinary results.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Customer Focus</h4>
+                    <p>Your success is our success. We're committed to exceeding expectations.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Creativity</h4>
+                    <p>We bring fresh perspectives and innovative thinking to every project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="team-member-photo">[Photo]</div>
+                <h4></h4>
+                <p>Chief Executive Officer</p>
+            </div>
+            <div class="team-member">
+                <div class="team-member-photo">[Photo]</div>
+                <h4></h4>
+                <p>Chief Technology Officer</p>
+            </div>
+            <div class="team-member">
+                <div class="team-member-photo">[Photo]</div>
+                <h4></h4>
+                <p>Creative Director</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>0+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+                <h3>0+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3>0+</h3>
+                <p>Team Members</p>
+            </div>
+            <div class="stat-item">
+                <h3>0+</h3>
+                <p>Years Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 techbrewplus. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
